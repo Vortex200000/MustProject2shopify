@@ -14,7 +14,6 @@ class Login extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         extendBody: true,
-
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,

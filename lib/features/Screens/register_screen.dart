@@ -64,6 +64,8 @@ class Register extends StatelessWidget {
                           {
                             return MyappStrings.FirstnError;
                           }
+                        return null;
+
                       },
                       decoration: InputDecoration(
                         fillColor: Color(0xfff5f8fa),
@@ -93,6 +95,7 @@ class Register extends StatelessWidget {
                         {
                           return MyappStrings.FirstnError;
                         }
+                        return null;
                       },
                       decoration: InputDecoration(
                         fillColor: Color(0xfff5f8fa),
@@ -123,6 +126,7 @@ class Register extends StatelessWidget {
                         {
                           return MyappStrings.FirstnError;
                         }
+                        return null;
                       },
                       decoration: InputDecoration(
                         fillColor: Color(0xfff5f8fa),
@@ -153,6 +157,7 @@ class Register extends StatelessWidget {
                         {
                           return MyappStrings.FirstnError;
                         }
+                        return null;
                       },
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
@@ -183,6 +188,7 @@ class Register extends StatelessWidget {
                         {
                           return MyappStrings.FirstnError;
                         }
+                        return null;
                       },
                       obscureText: true,
                       decoration: InputDecoration(
@@ -214,6 +220,7 @@ class Register extends StatelessWidget {
                               {
                                 return ;
                               }
+
 
                           },
                           child: Text(MyappStrings.Register),

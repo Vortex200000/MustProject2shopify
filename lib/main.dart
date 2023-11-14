@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mustproject2shopify2/config/routes/routes.dart';
 import 'package:mustproject2shopify2/features/Screens/Login_screen.dart';
 import 'package:mustproject2shopify2/features/Screens/register_screen.dart';
 
@@ -14,12 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Login.routName,
-      routes: {
-        Login.routName:(context) => Login(),
-        Register.routeName:(context) => Register(),
+        onGenerateRoute: (settings) => AppRouter.onGenerate(settings) ,
 
-      },
     );
   }
 }

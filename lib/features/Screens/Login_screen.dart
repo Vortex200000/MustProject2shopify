@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mustproject2shopify2/core/utils/App_strings.dart';
+import 'package:mustproject2shopify2/features/Screens/HomeScreen/Presentation/Screens/HomeLayout.dart';
 
 class Login extends StatelessWidget {
   // const Login({super.key});
@@ -56,7 +57,10 @@ class Login extends StatelessWidget {
                   ),
                   TextFormField(
                     validator: (value) {
-                      return MyappStrings.usernameerror;
+                      if (value == null || value.isEmpty) {
+                        return MyappStrings.usernameerror;
+                      }
+                      return null;
                     },
                     decoration: InputDecoration(
                       fillColor: Color(0xfff5f8fa),
@@ -82,7 +86,12 @@ class Login extends StatelessWidget {
                   ),
                   TextFormField(
                     validator: (value) {
-                      return MyappStrings.passworderror;
+                      if (value == null || value.isEmpty) {
+                        return MyappStrings.passworderror;
+                      }
+                      return null;
+
+
                     },
                     obscureText: true,
                     decoration: InputDecoration(
@@ -111,7 +120,7 @@ class Login extends StatelessWidget {
                       child: ElevatedButton(
                         onPressed: () {
                           if (logKey.currentState!.validate()) {
-                            return;
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => HomeLayout(),));
                           }
                         },
                         child: Text(MyappStrings.Login),
